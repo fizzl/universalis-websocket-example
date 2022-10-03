@@ -57,6 +57,8 @@ export class DataMetrics {
     }
 
     onSalesEvent(data: ISalesEvent) {
+        // TODO: Here you can do stuff with the parsed sales event,
+        // which contains the array of sales items.
         // console.log(data);
     }
 
