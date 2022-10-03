@@ -40,9 +40,9 @@ export class DataMetrics {
         }
         const binaryData = (msg as WebSocket.IBinaryMessage).binaryData;
         this.packetsReceived++;
-        this.dataReceived += msg.binaryData.byteLength;
+        this.dataReceived += binaryData.byteLength;
         this.pointInTimePacketsReceived++;
-        this.pointInTimeDataReceived += msg.binaryData.byteLength;
+        this.pointInTimeDataReceived += binaryData.byteLength;
 
         const data = deserialize(binaryData);
         switch (data.event) {
